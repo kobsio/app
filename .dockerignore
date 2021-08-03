@@ -1,0 +1,4 @@
+.github
+app/build
+app/node_modules
+bin
