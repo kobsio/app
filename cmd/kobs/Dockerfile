@@ -4,7 +4,7 @@ COPY app /kobs/app
 RUN cd app && yarn install --frozen-lockfile
 RUN cd app && yarn build
 
-FROM golang:1.16.5-alpine3.13 as api
+FROM golang:1.17.0-alpine3.14 as api
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 RUN echo "Building on $BUILDPLATFORM, for $TARGETPLATFORM" > /log
@@ -15,7 +15,7 @@ RUN go mod download
 COPY . .
 RUN make build
 
-FROM alpine:3.13.0
+FROM alpine:3.14
 RUN apk update && apk add --no-cache ca-certificates
 RUN mkdir /kobs
 COPY --from=app /kobs/app/build /kobs/app/build

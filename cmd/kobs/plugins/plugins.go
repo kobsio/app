@@ -12,8 +12,10 @@ import (
 	// Import all plugins, which should be used with the kobs instance. By default this are all first party plugins from
 	// the plugins folder.
 	"github.com/kobsio/kobs/plugins/applications"
+	"github.com/kobsio/kobs/plugins/clickhouse"
 	"github.com/kobsio/kobs/plugins/dashboards"
 	"github.com/kobsio/kobs/plugins/elasticsearch"
+	"github.com/kobsio/kobs/plugins/flux"
 	"github.com/kobsio/kobs/plugins/jaeger"
 	"github.com/kobsio/kobs/plugins/kiali"
 	"github.com/kobsio/kobs/plugins/markdown"
@@ -21,7 +23,9 @@ import (
 	"github.com/kobsio/kobs/plugins/prometheus"
 	"github.com/kobsio/kobs/plugins/resources"
 	"github.com/kobsio/kobs/plugins/rss"
+	"github.com/kobsio/kobs/plugins/sql"
 	"github.com/kobsio/kobs/plugins/teams"
+	"github.com/kobsio/kobs/plugins/users"
 
 	"github.com/kobsio/app/pkg/plugins/helloworld"
 )
@@ -29,16 +33,20 @@ import (
 // Config holds the configuration for all plugins. We have to add the configuration for all the imported plugins.
 type Config struct {
 	Applications  applications.Config  `json:"applications"`
-	Resources     resources.Config     `json:"resources"`
-	Teams         teams.Config         `json:"teams"`
+	Clickhouse    clickhouse.Config    `json:"clickhouse"`
 	Dashboards    dashboards.Config    `json:"dashboards"`
-	Prometheus    prometheus.Config    `json:"prometheus"`
 	Elasticsearch elasticsearch.Config `json:"elasticsearch"`
+	Flux          flux.Config          `json:"flux"`
 	Jaeger        jaeger.Config        `json:"jaeger"`
-	Markdown      markdown.Config      `json:"markdown"`
 	Kiali         kiali.Config         `json:"kiali"`
+	Markdown      markdown.Config      `json:"markdown"`
 	Opsgenie      opsgenie.Config      `json:"opsgenie"`
+	Prometheus    prometheus.Config    `json:"prometheus"`
+	Resources     resources.Config     `json:"resources"`
 	RSS           rss.Config           `json:"rss"`
+	SQL           sql.Config           `json:"sql"`
+	Teams         teams.Config         `json:"teams"`
+	Users         users.Config         `json:"users"`
 
 	HelloWorld helloworld.Config `json:"helloworld"`
 }
@@ -65,16 +73,20 @@ func Register(clusters *clusters.Clusters, config Config) chi.Router {
 	router.Get("/", router.getPlugins)
 
 	// Register all plugins
-	router.Mount(applications.Route, applications.Register(clusters, router.plugins, config.Applications))
 	router.Mount(resources.Route, resources.Register(clusters, router.plugins, config.Resources))
+	router.Mount(applications.Route, applications.Register(clusters, router.plugins, config.Applications))
 	router.Mount(teams.Route, teams.Register(clusters, router.plugins, config.Teams))
+	router.Mount(users.Route, users.Register(clusters, router.plugins, config.Users))
 	router.Mount(dashboards.Route, dashboards.Register(clusters, router.plugins, config.Dashboards))
 	router.Mount(prometheus.Route, prometheus.Register(clusters, router.plugins, config.Prometheus))
 	router.Mount(elasticsearch.Route, elasticsearch.Register(clusters, router.plugins, config.Elasticsearch))
 	router.Mount(jaeger.Route, jaeger.Register(clusters, router.plugins, config.Jaeger))
-	router.Mount(markdown.Route, markdown.Register(clusters, router.plugins, config.Markdown))
 	router.Mount(kiali.Route, kiali.Register(clusters, router.plugins, config.Kiali))
+	router.Mount(flux.Route, flux.Register(clusters, router.plugins, config.Flux))
 	router.Mount(opsgenie.Route, opsgenie.Register(clusters, router.plugins, config.Opsgenie))
+	router.Mount(clickhouse.Route, clickhouse.Register(clusters, router.plugins, config.Clickhouse))
+	router.Mount(sql.Route, sql.Register(clusters, router.plugins, config.SQL))
+	router.Mount(markdown.Route, markdown.Register(clusters, router.plugins, config.Markdown))
 	router.Mount(rss.Route, rss.Register(clusters, router.plugins, config.RSS))
 
 	router.Mount(helloworld.Route, helloworld.Register(clusters, router.plugins, config.HelloWorld))
