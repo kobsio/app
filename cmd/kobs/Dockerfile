@@ -1,7 +1,7 @@
 FROM --platform=linux/amd64 node:14 as app
 WORKDIR /kobs
 COPY app /kobs/app
-RUN cd app && yarn install --frozen-lockfile
+RUN cd app && yarn install --frozen-lockfile --network-timeout 3600000
 RUN cd app && yarn build
 
 FROM golang:1.17.0-alpine3.14 as api
