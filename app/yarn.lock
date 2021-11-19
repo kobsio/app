@@ -1472,13 +1472,13 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@kobsio/plugin-applications@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@kobsio/plugin-applications/-/plugin-applications-0.6.0.tgz#bec9738982b3023206463e6e2966da7d6307ee73"
-  integrity sha512-lJdU0OW8YuQu5un2igu7xqNzhI3kXTJHiVfarAWHDYPhQsxNt3Hp4r4fvcQ+jfqIOcfSPzxBHsGA8WXU/5pHPg==
+"@kobsio/plugin-applications@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-applications/-/plugin-applications-0.7.0.tgz#3594c22f209ae71525fcef99668bc012f4e93860"
+  integrity sha512-fnmi2YCOqfnpeguKCanjRzM4/5ysUPmBPtiX1qfKLfHSk/em5dXptqBaBY04KWgN/cQ4bCzbKxLAsFOQZ8Tl1w==
   dependencies:
-    "@kobsio/plugin-core" "^0.6.0"
-    "@kobsio/plugin-dashboards" "^0.6.0"
+    "@kobsio/plugin-core" "^0.7.0"
+    "@kobsio/plugin-dashboards" "^0.7.0"
     "@patternfly/react-core" "^4.128.2"
     "@patternfly/react-icons" "^4.10.11"
     "@types/cytoscape" "^3.14.15"
@@ -1496,32 +1496,10 @@
     react-router-dom "^5.2.0"
     typescript "^4.3.4"
 
-"@kobsio/plugin-clickhouse@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@kobsio/plugin-clickhouse/-/plugin-clickhouse-0.6.0.tgz#9972d0b4654b45ed94482518cf493cba182377c6"
-  integrity sha512-KJHXinpiYp4g7Xg1zkEVZ0kB79kaf72y0VsT7ZpHC4u0DyJ7zN5BoxgNPAXSfEGxQGGDxusJZ4vO1LQk3eLRZw==
-  dependencies:
-    "@kobsio/plugin-core" "^0.6.0"
-    "@nivo/bar" "^0.73.1"
-    "@nivo/pie" "^0.73.0"
-    "@patternfly/react-charts" "^6.15.23"
-    "@patternfly/react-core" "^4.128.2"
-    "@patternfly/react-icons" "^4.10.11"
-    "@patternfly/react-table" "^4.27.24"
-    "@types/react" "^17.0.0"
-    "@types/react-dom" "^17.0.0"
-    "@types/react-router-dom" "^5.1.7"
-    react "^17.0.2"
-    react-dom "^17.0.2"
-    react-intersection-observer "^8.32.1"
-    react-query "^3.17.2"
-    react-router-dom "^5.2.0"
-    typescript "^4.3.4"
-
-"@kobsio/plugin-core@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@kobsio/plugin-core/-/plugin-core-0.6.0.tgz#75645499e0988bba3297cc8c2337a1e90bc9fa56"
-  integrity sha512-78+lFF0XGM9w5CMZUI6LpOC54UiB8sgjlMvlS8hgaxnFJOqrnzKorADRqE6F6/fTbfJSXzpWaJ+WJky7D7frmA==
+"@kobsio/plugin-core@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-core/-/plugin-core-0.7.0.tgz#0c13038ec8f807fe723b844e0ee804106a59bfb6"
+  integrity sha512-JCkofze3p771Ux9T1pC85wvGw6fAPfn3iIsyXut3BU0HG+HSN6/ZXD0Z+mI3oe4O1hvNenDRaTPlNP17PKtysw==
   dependencies:
     "@kubernetes/client-node" "^0.15.0"
     "@nivo/core" "^0.73.0"
@@ -1544,12 +1522,12 @@
     xterm "^4.13.0"
     xterm-addon-fit "^0.5.0"
 
-"@kobsio/plugin-dashboards@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@kobsio/plugin-dashboards/-/plugin-dashboards-0.6.0.tgz#0763ae47eb5afc4e15c032f0ca6a798284e49cd6"
-  integrity sha512-BfCktns5YeR74B2fOWOcWzZtrICWFqiy3XFt6H/b08Vy2mMb/hzAqQqPGw4bGsPKS5k0tdkbDc9j+pOlQgFVwQ==
+"@kobsio/plugin-dashboards@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-dashboards/-/plugin-dashboards-0.7.0.tgz#6626f5c28878302ad0047f1982fc43391ce6ba77"
+  integrity sha512-DTefpdnMJe8//dv/lBdkoSDbSS/CkaI/htc6eIvx0NQyaWg0dhEqcVv8Uue77vtMOPVFXk/dBYyUuvWtrF+zjQ==
   dependencies:
-    "@kobsio/plugin-core" "^0.6.0"
+    "@kobsio/plugin-core" "^0.7.0"
     "@patternfly/react-core" "^4.128.2"
     "@types/react" "^17.0.0"
     "@types/react-dom" "^17.0.0"
@@ -1561,13 +1539,14 @@
     react-router-dom "^5.2.0"
     typescript "^4.3.4"
 
-"@kobsio/plugin-elasticsearch@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@kobsio/plugin-elasticsearch/-/plugin-elasticsearch-0.6.0.tgz#c090917d1fc0eb7416b1cdd80ed8533e95794ae1"
-  integrity sha512-3SaAJT2b1/aQ4Mi5dz2+HUaExPonzEIEMdjCX/8y/Fe/h+oc5Xhx3LfJgs4Z+Dy+4QDCtL1jD8NWFso556gspw==
+"@kobsio/plugin-elasticsearch@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-elasticsearch/-/plugin-elasticsearch-0.7.0.tgz#16aaa543db47f12bcced8e771ca3cb682d457d2f"
+  integrity sha512-Pw//VOChPfgh03EszCrgZ2Qu8lbBd5uygDSm+thMPAuAKdpnLlAKCF0Z5D0NX5WBSmKMvz9Zhw546Cr6aovfbg==
   dependencies:
-    "@kobsio/plugin-core" "^0.6.0"
+    "@kobsio/plugin-core" "^0.7.0"
     "@nivo/bar" "^0.73.1"
+    "@patternfly/react-charts" "^6.21.8"
     "@patternfly/react-core" "^4.128.2"
     "@patternfly/react-icons" "^4.10.11"
     "@patternfly/react-table" "^4.27.24"
@@ -1580,12 +1559,12 @@
     react-router-dom "^5.2.0"
     typescript "^4.3.4"
 
-"@kobsio/plugin-flux@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@kobsio/plugin-flux/-/plugin-flux-0.6.0.tgz#446882731b5e53ab7968e10ba2ff13af3f3add01"
-  integrity sha512-EJsfVcyHHZELSk9xBM2ABIm8SKqGCviKI5GHxlfZyPARPhLptCQNvsNVpiy+f60n6GDN3RhXnu+jSbGPzvCclQ==
+"@kobsio/plugin-flux@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-flux/-/plugin-flux-0.7.0.tgz#b505699f7f7e0285fda7003c0a0c7f556bead7a8"
+  integrity sha512-r/VYk3JNN7y6I787arZ/Mm1VLJ1mAc4BnZ1/GAgDjNcsA/kTxZB7XFR1EWg+I45rSxFSZEjmQaw5Zek6PLsqrg==
   dependencies:
-    "@kobsio/plugin-core" "^0.6.0"
+    "@kobsio/plugin-core" "^0.7.0"
     "@kubernetes/client-node" "^0.15.1"
     "@patternfly/react-core" "^4.128.2"
     "@patternfly/react-icons" "^4.10.11"
@@ -1599,12 +1578,68 @@
     react-router-dom "^5.2.0"
     typescript "^4.3.4"
 
-"@kobsio/plugin-jaeger@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@kobsio/plugin-jaeger/-/plugin-jaeger-0.6.0.tgz#f1c6fd6a1de8aa6761a9f850a608a62982c6fd31"
-  integrity sha512-Mfw63HMjPz5Oizr/ZqFpoilnvQGUMJqImGZfo1dpvnAtKkNek5lUJAw+EgEOAxQ4L98iwjOTMVT0Kf1wtQldpg==
+"@kobsio/plugin-grafana@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-grafana/-/plugin-grafana-0.7.0.tgz#6c7ae7ac8a4647c99f45aeee3ad8293deeca3026"
+  integrity sha512-R37LYxl5S8hbzpIf4glRGc4TUkSrfb7mjItSTfVio4SgpszQflYfQEsURElJgzfQt2WT/0wfZNBQjPmsK0RL2A==
   dependencies:
-    "@kobsio/plugin-core" "^0.6.0"
+    "@kobsio/plugin-core" "^0.7.0"
+    "@patternfly/react-core" "^4.128.2"
+    "@types/react" "^17.0.0"
+    "@types/react-dom" "^17.0.0"
+    "@types/react-router-dom" "^5.1.7"
+    react "^17.0.2"
+    react-dom "^17.0.2"
+    react-query "^3.17.2"
+    react-router-dom "^5.2.0"
+    typescript "^4.3.4"
+
+"@kobsio/plugin-harbor@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-harbor/-/plugin-harbor-0.7.0.tgz#306ed9a537f9c20905dbfe8d626e41b636af32d2"
+  integrity sha512-apfNApGSlKyS52/jv4OdqDxENUZ82UmOvG6yMEiLghZiNl0mdT05JUhSgvR5bKy6ElIvNQVqAB4RZOwHYCPaZA==
+  dependencies:
+    "@kobsio/plugin-core" "^0.7.0"
+    "@patternfly/react-core" "^4.128.2"
+    "@types/react" "^17.0.0"
+    "@types/react-dom" "^17.0.0"
+    "@types/react-router-dom" "^5.1.7"
+    react "^17.0.2"
+    react-dom "^17.0.2"
+    react-query "^3.17.2"
+    react-router-dom "^5.2.0"
+    typescript "^4.3.4"
+
+"@kobsio/plugin-istio@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-istio/-/plugin-istio-0.7.0.tgz#3a6113be62eade503d9564fe95f698d270638b30"
+  integrity sha512-R4DtZgRq4yyEXi2BGHNSg3xD7Hm5b03FiTV5xhR4svPMTFhz/KqeUZlvjjY5W6/4hkcqVXuHX0UDRMdqeTYfGQ==
+  dependencies:
+    "@kobsio/plugin-core" "^0.7.0"
+    "@kobsio/plugin-prometheus" "^0.7.0"
+    "@nivo/line" "^0.74.0"
+    "@patternfly/react-core" "^4.128.2"
+    "@types/cytoscape" "^3.14.15"
+    "@types/react" "^17.0.0"
+    "@types/react-cytoscapejs" "^1.2.2"
+    "@types/react-dom" "^17.0.0"
+    "@types/react-router-dom" "^5.1.7"
+    cytoscape "^3.19.1"
+    cytoscape-dagre "^2.3.2"
+    cytoscape-node-html-label "^1.2.2"
+    react "^17.0.2"
+    react-cytoscapejs "^1.2.1"
+    react-dom "^17.0.2"
+    react-query "^3.17.2"
+    react-router-dom "^5.2.0"
+    typescript "^4.3.4"
+
+"@kobsio/plugin-jaeger@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-jaeger/-/plugin-jaeger-0.7.0.tgz#23cb09350105ad8030860382104223c87961f211"
+  integrity sha512-2NPMT/0Ha+ziTx0akluGEz+J9VQhNwQtuUYmAtLBVT+ZYUIkY9hB+J97mKzJGecwGdsauOZySDad50FqBB/TiA==
+  dependencies:
+    "@kobsio/plugin-core" "^0.7.0"
     "@nivo/scatterplot" "^0.73.0"
     "@patternfly/react-core" "^4.128.2"
     "@patternfly/react-icons" "^4.10.11"
@@ -1619,12 +1654,13 @@
     react-virtuoso "^2.2.1"
     typescript "^4.3.4"
 
-"@kobsio/plugin-kiali@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@kobsio/plugin-kiali/-/plugin-kiali-0.6.0.tgz#e78ce39482dc70cebe21d8318ca3e631c7701ec4"
-  integrity sha512-pOvSFUd34WxxZPvHYdfR1R+IU21HcEmb6XNrlnlF+kW5/79ppeqLgFngRn5lGOyVwKBMejx8v//PEfSl7rdG2A==
+"@kobsio/plugin-kiali@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-kiali/-/plugin-kiali-0.7.0.tgz#b953a9a3d23c2bd10e5ad4f632e126ddf16c64a4"
+  integrity sha512-OgULqEUVYN0GVF5+jcKOBg17IF1ypIVXjQkZfngAw3aVsuMzjdGamUHFYHk0qudjE3w5DQ5kQdTAm8DM3aY9Sg==
   dependencies:
-    "@kobsio/plugin-core" "^0.6.0"
+    "@kobsio/plugin-core" "^0.7.0"
+    "@kobsio/plugin-prometheus" "^0.7.0"
     "@nivo/line" "^0.73.0"
     "@patternfly/react-core" "^4.128.2"
     "@patternfly/react-icons" "^4.10.11"
@@ -1643,12 +1679,34 @@
     react-router-dom "^5.2.0"
     typescript "^4.3.4"
 
-"@kobsio/plugin-markdown@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@kobsio/plugin-markdown/-/plugin-markdown-0.6.0.tgz#2849a336ef292e15730301174fa5b4f1a5db44e4"
-  integrity sha512-75Ot8VIL1whBJw1UWLiKate7fND5UTeaTfG/Tdv7mphybtr5Qi1HMlISzbO7knqRKTrpsiVWHEg6ul2Y8SIYIQ==
+"@kobsio/plugin-klogs@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-klogs/-/plugin-klogs-0.7.0.tgz#a8c010d49d70cb0edf4c3f389a19f7d9ea6c99a6"
+  integrity sha512-ylq/LF8hMuNUrTpxV8iG81YrSZzNsDxwlNh/gd7kYOK680978NYntaPQ0bsMt/Yf2rC1UG1ThjWlmdLQet4q4w==
   dependencies:
-    "@kobsio/plugin-core" "^0.6.0"
+    "@kobsio/plugin-core" "^0.7.0"
+    "@nivo/bar" "^0.73.1"
+    "@nivo/line" "^0.74.0"
+    "@nivo/pie" "^0.73.0"
+    "@patternfly/react-charts" "^6.15.23"
+    "@patternfly/react-core" "^4.128.2"
+    "@patternfly/react-icons" "^4.10.11"
+    "@patternfly/react-table" "^4.27.24"
+    "@types/react" "^17.0.0"
+    "@types/react-dom" "^17.0.0"
+    "@types/react-router-dom" "^5.1.7"
+    react "^17.0.2"
+    react-dom "^17.0.2"
+    react-query "^3.17.2"
+    react-router-dom "^5.2.0"
+    typescript "^4.3.4"
+
+"@kobsio/plugin-markdown@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-markdown/-/plugin-markdown-0.7.0.tgz#d7a4cf7885e533cde6480b9499d7c136431b1263"
+  integrity sha512-cCpj62u0hVzqZ9QuIuy6zes18IC7fjCgx3s75Ir0WpmgHXpg2s9MdSbQFK3j7JoNR9nHSjanvw1qnWxEgunm3g==
+  dependencies:
+    "@kobsio/plugin-core" "^0.7.0"
     "@patternfly/react-core" "^4.128.2"
     "@types/react" "^17.0.0"
     "@types/react-dom" "^17.0.0"
@@ -1657,12 +1715,12 @@
     react-markdown "7.0.1"
     typescript "^4.3.4"
 
-"@kobsio/plugin-opsgenie@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@kobsio/plugin-opsgenie/-/plugin-opsgenie-0.6.0.tgz#1a0e6fa9be112e2af5778848a3266af44151a894"
-  integrity sha512-7cnpz8Dp7vd/nMjrJVBu8mrzwqgJjJ3VHBd1fNr4ixBxcUEBjER6jG8YpR3KzH1Av0xhTibvkjW5zkbTvwkXkQ==
+"@kobsio/plugin-opsgenie@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-opsgenie/-/plugin-opsgenie-0.7.0.tgz#589df4d783330beecdedbc586832fc79d4428aa4"
+  integrity sha512-zNVxf0Wz83VQm7Mo4JZ8WayRSdJEUt732BDU/hXjaXOFGHACDT0R8NcJkv5Vm+e7zHQ2EcuEBynGYYTHcsNh+w==
   dependencies:
-    "@kobsio/plugin-core" "^0.6.0"
+    "@kobsio/plugin-core" "^0.7.0"
     "@patternfly/react-core" "^4.128.2"
     "@types/react" "^17.0.0"
     "@types/react-dom" "^17.0.0"
@@ -1673,12 +1731,12 @@
     react-router-dom "^5.2.0"
     typescript "^4.3.4"
 
-"@kobsio/plugin-prometheus@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@kobsio/plugin-prometheus/-/plugin-prometheus-0.6.0.tgz#f866d94b99ee4e81b2c6d07ee7733f0c837edb38"
-  integrity sha512-0bRp4hruvQI+Nb+MpgPXtaN348hyL7b360CGSnnmLu2eCKOwWPOcMOs5NNnC7ygLkKsdp+20FbLFTNPPsMmMNA==
+"@kobsio/plugin-prometheus@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-prometheus/-/plugin-prometheus-0.7.0.tgz#f1e37c6f2c9d3727da1409b251d5cea3b646beb0"
+  integrity sha512-L+POZ44wBMBPCoBgk7Uxm1Zm33B7AOo+FWnSxT6i4x6Via5o8qYa2nBopGNCz7poxjL8AOXLzVtodltXHeu+oQ==
   dependencies:
-    "@kobsio/plugin-core" "^0.6.0"
+    "@kobsio/plugin-core" "^0.7.0"
     "@nivo/core" "^0.73.0"
     "@nivo/line" "^0.73.0"
     "@patternfly/react-core" "^4.128.2"
@@ -1693,13 +1751,13 @@
     react-router-dom "^5.2.0"
     typescript "^4.3.4"
 
-"@kobsio/plugin-resources@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@kobsio/plugin-resources/-/plugin-resources-0.6.0.tgz#bc5874025a08384023273d274cc2953a471371bf"
-  integrity sha512-nQqOsKyZaJDbvmOn98mlzaWcsl69CG/ODam5iuqegSOLX2JSp0LUOXklsnGR3uojefOvaRlQcrK2T4lh9JR7Cw==
+"@kobsio/plugin-resources@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-resources/-/plugin-resources-0.7.0.tgz#c76bafc6c3e7e85014139242586c9d100943ae4e"
+  integrity sha512-o6qjggmCoqmRJIfjlfewKmmRdcLnL9tnljhkxzI2ziV2GPc4Ra2q/11uShCePoH9kKpX8Q7fGjl4PZ+F8JL7fQ==
   dependencies:
-    "@kobsio/plugin-core" "^0.6.0"
-    "@kobsio/plugin-dashboards" "^0.6.0"
+    "@kobsio/plugin-core" "^0.7.0"
+    "@kobsio/plugin-dashboards" "^0.7.0"
     "@kubernetes/client-node" "^0.15.0"
     "@nivo/bar" "^0.73.1"
     "@patternfly/react-core" "^4.128.2"
@@ -1717,12 +1775,12 @@
     typescript "^4.3.4"
     xterm "^4.13.0"
 
-"@kobsio/plugin-rss@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@kobsio/plugin-rss/-/plugin-rss-0.6.0.tgz#9c04ebd472aef481ad2863c67d486252c394ee93"
-  integrity sha512-T2bhL56UlSRDZ/+hOMRpQMPhJj7yVpqpZnUBfsg1D5qgDescUmAa+/NY8ZXl2zvy6Xw3HJ/KZ8SFlLypeea34w==
+"@kobsio/plugin-rss@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-rss/-/plugin-rss-0.7.0.tgz#2b06658cfcc8115ec1980a67ea1aeac2950677ff"
+  integrity sha512-p7NWTcrQzSIhdE6/USCY/uo64LYSkoynINZh2HLq9GoNogLPCJ72oC26zshtupVGnEP5sVOYn73oJgh3oMePkQ==
   dependencies:
-    "@kobsio/plugin-core" "^0.6.0"
+    "@kobsio/plugin-core" "^0.7.0"
     "@patternfly/react-core" "^4.128.2"
     "@types/react" "^17.0.0"
     "@types/react-dom" "^17.0.0"
@@ -1731,12 +1789,28 @@
     react-dom "^17.0.2"
     typescript "^4.3.4"
 
-"@kobsio/plugin-sql@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@kobsio/plugin-sql/-/plugin-sql-0.6.0.tgz#17d46c4a4e537465b9ad1bfc7f6891df950f8d00"
-  integrity sha512-J7k6wmRvNxiBnPMwbdnRyaOfF+PNkkyMtfgEooWMRhiiGg14rKalPJ+XW/Q94i6ZRl6e7oooFP8YaplrxYrFjQ==
+"@kobsio/plugin-sonarqube@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-sonarqube/-/plugin-sonarqube-0.7.0.tgz#d2630683a1d121f706f71d7eee23ba48ae118b6c"
+  integrity sha512-jghH18krKwDm4nN2Av1uaf4OcrwwKIu2hOzr08fAffkoliBqilU+c1NCo5ehOn2lb3XdP903+A/nSkemjUAPGw==
   dependencies:
-    "@kobsio/plugin-core" "^0.6.0"
+    "@kobsio/plugin-core" "^0.7.0"
+    "@patternfly/react-core" "^4.128.2"
+    "@types/react" "^17.0.0"
+    "@types/react-dom" "^17.0.0"
+    "@types/react-router-dom" "^5.1.7"
+    react "^17.0.2"
+    react-dom "^17.0.2"
+    react-query "^3.17.2"
+    react-router-dom "^5.2.0"
+    typescript "^4.3.4"
+
+"@kobsio/plugin-sql@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-sql/-/plugin-sql-0.7.0.tgz#18fec6c98c3c93dbf0a2a99ed3c185c0c2f4640e"
+  integrity sha512-yTGFZ0osGCW/NZrDRg0rG4Eoj27uxJrJ3pPQ2GLVAGAoFaV10KKNagm18oWeVcD1ERQLUTzjopdjWdH+82+UkA==
+  dependencies:
+    "@kobsio/plugin-core" "^0.7.0"
     "@patternfly/react-core" "^4.128.2"
     "@patternfly/react-icons" "^4.10.11"
     "@patternfly/react-table" "^4.27.24"
@@ -1749,13 +1823,13 @@
     react-router-dom "^5.2.0"
     typescript "^4.3.4"
 
-"@kobsio/plugin-teams@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@kobsio/plugin-teams/-/plugin-teams-0.6.0.tgz#63eb2a8403eb587f2befb8c4e6e0aa628f5bab48"
-  integrity sha512-X2oEv43Y2AUZPCghizwYs7qUi/kjZBm9DonTVjnAMnpclLlLBnt/qm1JQTz9PldwUqAvEHb5T4Th4DlFw4EPPg==
+"@kobsio/plugin-teams@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-teams/-/plugin-teams-0.7.0.tgz#6035405502e6f277b9ffce354475550a36828398"
+  integrity sha512-RxHpvu3FShwuqr2l6F7aQLDAy3qrA7+fiUE97zdSL5RpO5QHYzvc5lk+LNSSn3dy9V1BwNKdPnCtcOZlLzfyQg==
   dependencies:
-    "@kobsio/plugin-core" "^0.6.0"
-    "@kobsio/plugin-dashboards" "^0.6.0"
+    "@kobsio/plugin-core" "^0.7.0"
+    "@kobsio/plugin-dashboards" "^0.7.0"
     "@patternfly/react-core" "^4.128.2"
     "@types/react" "^17.0.0"
     "@types/react-dom" "^17.0.0"
@@ -1766,13 +1840,13 @@
     react-router-dom "^5.2.0"
     typescript "^4.3.4"
 
-"@kobsio/plugin-users@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@kobsio/plugin-users/-/plugin-users-0.6.0.tgz#3ca8704e6f7c4173e4455f59b859e9e4d0308743"
-  integrity sha512-SIpsCEEGpnNUYysQzpc5V9lMbFAjXXUCkwjUtSuUfiWeU0HshQGYYPfYefZwQPs/qisaJSeF+Tig31xSIKLFgg==
+"@kobsio/plugin-users@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@kobsio/plugin-users/-/plugin-users-0.7.0.tgz#20903bb04562e211f913d2bc3deb3889d9c8115d"
+  integrity sha512-8E/EE0RzAVC3QvEi7H5u0fMTS9ZXER3eN7Pjo4NlkDfpEdOHRP74lLWasfx/H6wA1F9iBegK4GRrcIl7yqNgPQ==
   dependencies:
-    "@kobsio/plugin-core" "^0.6.0"
-    "@kobsio/plugin-teams" "^0.6.0"
+    "@kobsio/plugin-core" "^0.7.0"
+    "@kobsio/plugin-teams" "^0.7.0"
     "@patternfly/react-core" "^4.128.2"
     "@types/react" "^17.0.0"
     "@types/react-dom" "^17.0.0"
@@ -1821,6 +1895,15 @@
     "@react-spring/web" "9.2.4"
     lodash "^4.17.21"
 
+"@nivo/annotations@0.74.0":
+  version "0.74.0"
+  resolved "https://registry.yarnpkg.com/@nivo/annotations/-/annotations-0.74.0.tgz#f4a3474fdf8812c3812c30e08d3277e209bec0f6"
+  integrity sha512-nxZLKDi9YEy2zZUsOtbYL/2oAgsxK5SVZ1P3Csll+cQ96uLU6sU7jmb67AwK0nDbYk7BD3sZf/O/A9r/MCK4Ow==
+  dependencies:
+    "@nivo/colors" "0.74.0"
+    "@react-spring/web" "9.2.6"
+    lodash "^4.17.21"
+
 "@nivo/arcs@0.73.0":
   version "0.73.0"
   resolved "https://registry.yarnpkg.com/@nivo/arcs/-/arcs-0.73.0.tgz#2211a0c41e8f6ed67374aeebdad607fbb3a1db2f"
@@ -1839,6 +1922,16 @@
     "@react-spring/web" "9.2.4"
     d3-format "^1.4.4"
     d3-time "^1.0.11"
+    d3-time-format "^3.0.0"
+
+"@nivo/axes@0.74.0":
+  version "0.74.0"
+  resolved "https://registry.yarnpkg.com/@nivo/axes/-/axes-0.74.0.tgz#cf7cf2277b7aca5449a040ddf3e0cf9891971199"
+  integrity sha512-27o1H+Br0AaeUTiRhy7OebqzYEWr1xznHOxd+Hn2Xz9kK1alGBiPgwXrkXV0Q9CtrsroQFnX2QR3JxRgOtC5fA==
+  dependencies:
+    "@nivo/scales" "0.74.0"
+    "@react-spring/web" "9.2.6"
+    d3-format "^1.4.4"
     d3-time-format "^3.0.0"
 
 "@nivo/bar@^0.73.1":
@@ -1869,6 +1962,17 @@
     lodash "^4.17.21"
     react-motion "^0.5.2"
 
+"@nivo/colors@0.74.0":
+  version "0.74.0"
+  resolved "https://registry.yarnpkg.com/@nivo/colors/-/colors-0.74.0.tgz#29d1e7c6f3bcab4e872a168651b3a90cfba03a4f"
+  integrity sha512-5ClckmBm3x2XdJqHMylr6erY+scEL/twoGVfyXak/L+AIhL+Gf9PQxyxyfl3Lbtc3SPeAQe0ZAO1+VrmTn7qlA==
+  dependencies:
+    d3-color "^2.0.0"
+    d3-scale "^3.2.3"
+    d3-scale-chromatic "^2.0.0"
+    lodash "^4.17.21"
+    react-motion "^0.5.2"
+
 "@nivo/core@^0.73.0":
   version "0.73.0"
   resolved "https://registry.yarnpkg.com/@nivo/core/-/core-0.73.0.tgz#58fac20c8cd7eac12bfdc96619554764ca225cdf"
@@ -1892,6 +1996,11 @@
   resolved "https://registry.yarnpkg.com/@nivo/legends/-/legends-0.73.0.tgz#ef344038c4ff03249ffffebaf14412d012004fda"
   integrity sha512-OWyu3U6PJL2VGlAfoz6nTU4opXHlR0yp0h+0Q0rf/hMKQLiew6NmecKcR1Nx2Qw4dJHgOnZRXqQ6vQrhcNV3WQ==
 
+"@nivo/legends@0.74.0":
+  version "0.74.0"
+  resolved "https://registry.yarnpkg.com/@nivo/legends/-/legends-0.74.0.tgz#8e5e04b2a3f980c2073a394d94c4d89fa8bc8724"
+  integrity sha512-Bfk392ngre1C8UaGoymwqK0acjjzuk0cglUSNsr0z8BAUQIVGUPthtfcxbq/yUYGJL/cxWky2QKxi9r3C0FbmA==
+
 "@nivo/line@^0.73.0":
   version "0.73.0"
   resolved "https://registry.yarnpkg.com/@nivo/line/-/line-0.73.0.tgz#8d77963d0ff014138b2201cc0836f0a12593225f"
@@ -1905,6 +2014,21 @@
     "@nivo/tooltip" "0.73.0"
     "@nivo/voronoi" "0.73.0"
     "@react-spring/web" "9.2.4"
+    d3-shape "^1.3.5"
+
+"@nivo/line@^0.74.0":
+  version "0.74.0"
+  resolved "https://registry.yarnpkg.com/@nivo/line/-/line-0.74.0.tgz#f1f430d64a81d2fe1a5fd49e5cfaa61242066927"
+  integrity sha512-uJssLII1UTfxrZkPrkki054LFUpSKeqS35ttwK6VLvyqs5r3SrSXn223vDRNaaxuop5oT/L3APUJQwQDqUcj3w==
+  dependencies:
+    "@nivo/annotations" "0.74.0"
+    "@nivo/axes" "0.74.0"
+    "@nivo/colors" "0.74.0"
+    "@nivo/legends" "0.74.0"
+    "@nivo/scales" "0.74.0"
+    "@nivo/tooltip" "0.74.0"
+    "@nivo/voronoi" "0.74.0"
+    "@react-spring/web" "9.2.6"
     d3-shape "^1.3.5"
 
 "@nivo/pie@^0.73.0":
@@ -1935,6 +2059,16 @@
     d3-time-format "^3.0.0"
     lodash "^4.17.21"
 
+"@nivo/scales@0.74.0":
+  version "0.74.0"
+  resolved "https://registry.yarnpkg.com/@nivo/scales/-/scales-0.74.0.tgz#ede12b899da9e3aee7921ebce40f227e670a430d"
+  integrity sha512-5mER71NgZGdgs8X2PgilBpAWMMGtTXrUuYOBQWDKDMgtc83MU+mphhiYfLv5e6ViZyUB5ebfEkfeIgStLqrcEA==
+  dependencies:
+    d3-scale "^3.2.3"
+    d3-time "^1.0.11"
+    d3-time-format "^3.0.0"
+    lodash "^4.17.21"
+
 "@nivo/scatterplot@^0.73.0":
   version "0.73.0"
   resolved "https://registry.yarnpkg.com/@nivo/scatterplot/-/scatterplot-0.73.0.tgz#1d81ee364b6af427948055349f719455494b1ea8"
@@ -1959,10 +2093,25 @@
   dependencies:
     "@react-spring/web" "9.2.4"
 
+"@nivo/tooltip@0.74.0":
+  version "0.74.0"
+  resolved "https://registry.yarnpkg.com/@nivo/tooltip/-/tooltip-0.74.0.tgz#60d94b0fecc2fc179ada3efa380e7e456982b4a5"
+  integrity sha512-h3PUgNFF5HUeQFfx19MWS1uGK8iUDymZNY+5PyaCWDFT+0/ldXBu8uw5WYRui2KwNdTym6F0E/aT7JKczDd85w==
+  dependencies:
+    "@react-spring/web" "9.2.6"
+
 "@nivo/voronoi@0.73.0":
   version "0.73.0"
   resolved "https://registry.yarnpkg.com/@nivo/voronoi/-/voronoi-0.73.0.tgz#858aa5340c93bc299e07938b1e6770394ca7e9c9"
   integrity sha512-jYDwNkNhEXRt4LR3hTxBZpuRDUQN4GtdP4fxcJIFGxvmh3Bsd3XQMWPqZYTNpgDddYjsnLtLe5RvR5gC7hBojw==
+  dependencies:
+    d3-delaunay "^5.3.0"
+    d3-scale "^3.2.3"
+
+"@nivo/voronoi@0.74.0":
+  version "0.74.0"
+  resolved "https://registry.yarnpkg.com/@nivo/voronoi/-/voronoi-0.74.0.tgz#4b427955ddabd86934a2bbb95a62ff53ee97c575"
+  integrity sha512-Q3267T1+Tlufn8LbmSYnO8x9gL+h/iwH2Uqc5CENHSZu2KPD0PB82vxpQnbDVhjadulI0rlrPA9fU3VY3q1zKg==
   dependencies:
     d3-delaunay "^5.3.0"
     d3-scale "^3.2.3"
@@ -2040,6 +2189,32 @@
     victory-voronoi-container "^35.9.1"
     victory-zoom-container "^35.9.0"
 
+"@patternfly/react-charts@^6.21.8":
+  version "6.28.4"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-charts/-/react-charts-6.28.4.tgz#a06309dd6773e053c2de4d8e1fde814137513c9b"
+  integrity sha512-0craRoUaajy7MO54GMAIpxu8rv27R1U2wizMbwPmXqd2zedFrlWW3+Dmm6p7tpyy1cZ66XvDm9wdSvHHjQYiRQ==
+  dependencies:
+    "@patternfly/react-styles" "^4.25.4"
+    "@patternfly/react-tokens" "^4.27.4"
+    hoist-non-react-statics "^3.3.0"
+    lodash "^4.17.19"
+    tslib "^2.0.0"
+    victory-area "^35.9.0"
+    victory-axis "^35.9.0"
+    victory-bar "^35.9.0"
+    victory-chart "^35.9.0"
+    victory-core "^35.9.0"
+    victory-create-container "^35.9.1"
+    victory-group "^35.9.0"
+    victory-legend "^35.9.0"
+    victory-line "^35.9.0"
+    victory-pie "^35.9.0"
+    victory-scatter "^35.9.0"
+    victory-stack "^35.9.0"
+    victory-tooltip "^35.9.1"
+    victory-voronoi-container "^35.9.1"
+    victory-zoom-container "^35.9.0"
+
 "@patternfly/react-core@^4.128.2", "@patternfly/react-core@^4.135.0", "@patternfly/react-core@^4.157.3":
   version "4.157.3"
   resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-4.157.3.tgz#038c98b21ef4d7459f2120c27be4518afbcf1395"
@@ -2063,6 +2238,11 @@
   resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-4.11.16.tgz#55327c57d086aadb9f0f4c0e67ab38856c3ca165"
   integrity sha512-4ZFynQuJmRF7VbZeQSs44MX6MEvW7l7ZR8lMeChd8mxnQpG8pWtVUbcHdj9FFHPZVa+sPrgrZQl8QmhbqYyOsg==
 
+"@patternfly/react-styles@^4.25.4":
+  version "4.25.4"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-4.25.4.tgz#e49c9b290d1e48a12e9d62f3e57079fccf758392"
+  integrity sha512-GHFLzsvyimymkGTTyTW8HZDlhYbGpCqw/69Se1EHCaZnbTYluiJMRI6YfNTRC5ZvYF+x4GMAG5AjwQ5LfbZ/xg==
+
 "@patternfly/react-table@^4.27.24":
   version "4.30.3"
   resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-4.30.3.tgz#17a854d7d994a1ca8ede9f5f16870ee4f86e16b6"
@@ -2079,6 +2259,11 @@
   version "4.12.18"
   resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-4.12.18.tgz#e8c75f19ecc33de180cef6cb3e9a6679c5ffeb7c"
   integrity sha512-3bNUOSOMLmhxPku4fvopxt3StotaHGqHvlIDMxp9pGIgb0o02RyZ8JIioCCO1GkvPPIn6pKs/cGJDlB7zHV48Q==
+
+"@patternfly/react-tokens@^4.27.4":
+  version "4.27.4"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-4.27.4.tgz#9a292a2ac24e17714456a0b6ee5b512a0850ec05"
+  integrity sha512-+DVCp4edPwORQF2zH6aG8e7FhLBXKsZgxMEYBU1/3qQSp+gf6Q8M4HiqbNnR6uo99tYJ9JiEcbGZu4Mx+nDIuA==
 
 "@pmmmwh/react-refresh-webpack-plugin@0.4.3":
   version "0.4.3"
@@ -2100,7 +2285,7 @@
     "@react-spring/shared" "~9.2.6-beta.0"
     "@react-spring/types" "~9.2.6-beta.0"
 
-"@react-spring/core@~9.2.0":
+"@react-spring/core@~9.2.0", "@react-spring/core@~9.2.6-beta.0":
   version "9.2.6"
   resolved "https://registry.yarnpkg.com/@react-spring/core/-/core-9.2.6.tgz#ae22338fe55d070caf03abb4293b5519ba620d93"
   integrity sha512-uPHUxmu+w6mHJrfQTMtmGJ8iZEwiVxz9kH7dRyk69bkZJt9z+w0Oj3UF4J3VcECZsbm3HRhN2ogXSAaqGjwhQw==
@@ -2136,6 +2321,16 @@
     "@react-spring/core" "~9.2.0"
     "@react-spring/shared" "~9.2.0"
     "@react-spring/types" "~9.2.0"
+
+"@react-spring/web@9.2.6":
+  version "9.2.6"
+  resolved "https://registry.yarnpkg.com/@react-spring/web/-/web-9.2.6.tgz#c4fba69e1b1b43bd1d6a62346530cfb07f2be09b"
+  integrity sha512-0HkRsEYR/CO3Uw46FWDWaF2wg2rUXcWE2R9AoZXthEYLUn5w9uE1mf2Jel7BxBxWGQ73owkqSQv+klA1Hb+ViQ==
+  dependencies:
+    "@react-spring/animated" "~9.2.6-beta.0"
+    "@react-spring/core" "~9.2.6-beta.0"
+    "@react-spring/shared" "~9.2.6-beta.0"
+    "@react-spring/types" "~9.2.6-beta.0"
 
 "@rollup/plugin-node-resolve@^7.1.1":
   version "7.1.3"
@@ -4824,6 +5019,14 @@ cytoscape@^3.19.0, cytoscape@^3.2.19:
   version "3.19.1"
   resolved "https://registry.yarnpkg.com/cytoscape/-/cytoscape-3.19.1.tgz#034fb5e5de7e6b9b7c948a48da8ab7037d430f69"
   integrity sha512-fQSymoCzmDF5dejZqv94WXQUnI3cVZfaHWFQR+Q9RhJ6LzEs7dtkwgFYaoklsbXcrXz0uCGx4i3vQ0FiuOUu9Q==
+  dependencies:
+    heap "^0.2.6"
+    lodash.debounce "^4.0.8"
+
+cytoscape@^3.19.1:
+  version "3.20.0"
+  resolved "https://registry.yarnpkg.com/cytoscape/-/cytoscape-3.20.0.tgz#c626c1074f3a8a6f1bc58e8fbee8fd798a6fcbf3"
+  integrity sha512-V2OUoav8ltY9UPgdjuhQOqkkWT28IbJODioWCjcnLqmjym9lMpnD0ie0vdQCdAiZapjbTGAv8aoKmmSuVcC1gA==
   dependencies:
     heap "^0.2.6"
     lodash.debounce "^4.0.8"
