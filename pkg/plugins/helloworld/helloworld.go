@@ -3,7 +3,6 @@ package helloworld
 import (
 	"net/http"
 
-	"github.com/kobsio/kobs/pkg/api/clusters"
 	"github.com/kobsio/kobs/pkg/api/plugins/plugin"
 
 	"github.com/go-chi/chi/v5"
@@ -30,8 +29,7 @@ type Config struct {
 // Router implements the router for the resources plugin, which can be registered in the router for our rest api.
 type Router struct {
 	*chi.Mux
-	clusters *clusters.Clusters
-	config   Config
+	config Config
 }
 
 // getName returns the name form the configuration.
@@ -47,7 +45,7 @@ func (router *Router) getName(w http.ResponseWriter, r *http.Request) {
 }
 
 // Register returns a new router which can be used in the router for the kobs rest api.
-func Register(clusters *clusters.Clusters, plugins *plugin.Plugins, config Config) chi.Router {
+func Register(plugins *plugin.Plugins, config Config) chi.Router {
 	plugins.Append(plugin.Plugin{
 		Name:        config.Name,
 		DisplayName: config.DisplayName,
@@ -57,7 +55,6 @@ func Register(clusters *clusters.Clusters, plugins *plugin.Plugins, config Confi
 
 	router := Router{
 		chi.NewRouter(),
-		clusters,
 		config,
 	}
 

@@ -12,11 +12,13 @@ import (
 	// Import all plugins, which should be used with the kobs instance. By default this are all first party plugins from
 	// the plugins folder.
 	"github.com/kobsio/kobs/plugins/applications"
+	"github.com/kobsio/kobs/plugins/azure"
 	"github.com/kobsio/kobs/plugins/dashboards"
 	"github.com/kobsio/kobs/plugins/elasticsearch"
 	"github.com/kobsio/kobs/plugins/flux"
 	"github.com/kobsio/kobs/plugins/grafana"
 	"github.com/kobsio/kobs/plugins/harbor"
+	"github.com/kobsio/kobs/plugins/helm"
 	"github.com/kobsio/kobs/plugins/istio"
 	"github.com/kobsio/kobs/plugins/jaeger"
 	"github.com/kobsio/kobs/plugins/kiali"
@@ -29,6 +31,7 @@ import (
 	"github.com/kobsio/kobs/plugins/sonarqube"
 	"github.com/kobsio/kobs/plugins/sql"
 	"github.com/kobsio/kobs/plugins/teams"
+	"github.com/kobsio/kobs/plugins/techdocs"
 	"github.com/kobsio/kobs/plugins/users"
 
 	"github.com/kobsio/app/pkg/plugins/helloworld"
@@ -37,11 +40,13 @@ import (
 // Config holds the configuration for all plugins. We have to add the configuration for all the imported plugins.
 type Config struct {
 	Applications  applications.Config  `json:"applications"`
+	Azure         azure.Config         `json:"azure"`
 	Dashboards    dashboards.Config    `json:"dashboards"`
 	Elasticsearch elasticsearch.Config `json:"elasticsearch"`
 	Flux          flux.Config          `json:"flux"`
 	Grafana       grafana.Config       `json:"grafana"`
 	Harbor        harbor.Config        `json:"harbor"`
+	Helm          helm.Config          `json:"helm"`
 	Istio         istio.Config         `json:"istio"`
 	Jaeger        jaeger.Config        `json:"jaeger"`
 	Kiali         kiali.Config         `json:"kiali"`
@@ -54,6 +59,7 @@ type Config struct {
 	Sonarqube     sonarqube.Config     `json:"sonarqube"`
 	SQL           sql.Config           `json:"sql"`
 	Teams         teams.Config         `json:"teams"`
+	TechDocs      techdocs.Config      `json:"techdocs"`
 	Users         users.Config         `json:"users"`
 
 	HelloWorld helloworld.Config `json:"helloworld"`
@@ -72,7 +78,7 @@ func (router *Router) getPlugins(w http.ResponseWriter, r *http.Request) {
 }
 
 // Register is used to register all api routes for plugins.
-func Register(clusters *clusters.Clusters, config Config) chi.Router {
+func Register(clustersClient clusters.Client, config Config) chi.Router {
 	router := Router{
 		chi.NewRouter(),
 		&plugin.Plugins{},
@@ -81,27 +87,30 @@ func Register(clusters *clusters.Clusters, config Config) chi.Router {
 	router.Get("/", router.getPlugins)
 
 	// Initialize all plugins
-	resourcesRouter := resources.Register(clusters, router.plugins, config.Resources)
-	applicationsRouter := applications.Register(clusters, router.plugins, config.Applications)
-	teamsRouter := teams.Register(clusters, router.plugins, config.Teams)
-	usersRouter := users.Register(clusters, router.plugins, config.Users)
-	dashboardsRouter := dashboards.Register(clusters, router.plugins, config.Dashboards)
-	prometheusRouter, prometheusInstances := prometheus.Register(clusters, router.plugins, config.Prometheus)
-	elasticsearchRouter := elasticsearch.Register(clusters, router.plugins, config.Elasticsearch)
-	klogsRouter, klogsInstances := klogs.Register(clusters, router.plugins, config.Klogs)
-	jaegerRouter := jaeger.Register(clusters, router.plugins, config.Jaeger)
-	kialiRouter := kiali.Register(clusters, router.plugins, config.Kiali)
-	istioRouter := istio.Register(clusters, router.plugins, config.Istio, prometheusInstances, klogsInstances)
-	grafanaRouter := grafana.Register(clusters, router.plugins, config.Grafana)
-	harborRouter := harbor.Register(clusters, router.plugins, config.Harbor)
-	fluxRouter := flux.Register(clusters, router.plugins, config.Flux)
-	opsgenieRouter := opsgenie.Register(clusters, router.plugins, config.Opsgenie)
-	sonarqubeRouter := sonarqube.Register(clusters, router.plugins, config.Sonarqube)
-	sqlRouter := sql.Register(clusters, router.plugins, config.SQL)
-	markdownRouter := markdown.Register(clusters, router.plugins, config.Markdown)
-	rssRouter := rss.Register(clusters, router.plugins, config.RSS)
+	resourcesRouter := resources.Register(clustersClient, router.plugins, config.Resources)
+	applicationsRouter := applications.Register(clustersClient, router.plugins, config.Applications)
+	teamsRouter := teams.Register(clustersClient, router.plugins, config.Teams)
+	usersRouter := users.Register(clustersClient, router.plugins, config.Users)
+	dashboardsRouter := dashboards.Register(clustersClient, router.plugins, config.Dashboards)
+	helmRouter := helm.Register(clustersClient, router.plugins, config.Helm)
+	prometheusRouter, prometheusInstances := prometheus.Register(router.plugins, config.Prometheus)
+	elasticsearchRouter := elasticsearch.Register(router.plugins, config.Elasticsearch)
+	klogsRouter, klogsInstances := klogs.Register(router.plugins, config.Klogs)
+	jaegerRouter := jaeger.Register(router.plugins, config.Jaeger)
+	kialiRouter := kiali.Register(router.plugins, config.Kiali)
+	istioRouter := istio.Register(router.plugins, config.Istio, prometheusInstances, klogsInstances)
+	grafanaRouter := grafana.Register(router.plugins, config.Grafana)
+	harborRouter := harbor.Register(router.plugins, config.Harbor)
+	fluxRouter := flux.Register(clustersClient, router.plugins, config.Flux)
+	opsgenieRouter := opsgenie.Register(router.plugins, config.Opsgenie)
+	sonarqubeRouter := sonarqube.Register(router.plugins, config.Sonarqube)
+	techdocsRouter := techdocs.Register(router.plugins, config.TechDocs)
+	azureRouter := azure.Register(router.plugins, config.Azure)
+	sqlRouter := sql.Register(router.plugins, config.SQL)
+	markdownRouter := markdown.Register(router.plugins, config.Markdown)
+	rssRouter := rss.Register(router.plugins, config.RSS)
 
-	helloworldRouter := helloworld.Register(clusters, router.plugins, config.HelloWorld)
+	helloworldRouter := helloworld.Register(router.plugins, config.HelloWorld)
 
 	// Register all plugins
 	router.Mount(resources.Route, resourcesRouter)
@@ -109,6 +118,7 @@ func Register(clusters *clusters.Clusters, config Config) chi.Router {
 	router.Mount(teams.Route, teamsRouter)
 	router.Mount(users.Route, usersRouter)
 	router.Mount(dashboards.Route, dashboardsRouter)
+	router.Mount(helm.Route, helmRouter)
 	router.Mount(prometheus.Route, prometheusRouter)
 	router.Mount(elasticsearch.Route, elasticsearchRouter)
 	router.Mount(klogs.Route, klogsRouter)
@@ -120,6 +130,8 @@ func Register(clusters *clusters.Clusters, config Config) chi.Router {
 	router.Mount(flux.Route, fluxRouter)
 	router.Mount(opsgenie.Route, opsgenieRouter)
 	router.Mount(sonarqube.Route, sonarqubeRouter)
+	router.Mount(techdocs.Route, techdocsRouter)
+	router.Mount(azure.Route, azureRouter)
 	router.Mount(sql.Route, sqlRouter)
 	router.Mount(markdown.Route, markdownRouter)
 	router.Mount(rss.Route, rssRouter)
