@@ -1,4 +1,4 @@
-name: Docker
+name: Continuous Delivery
 
 on:
   push:
@@ -45,6 +45,6 @@ jobs:
         with:
           push: true
           context: .
-          file: ./cmd/kobs/Dockerfile
-          platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8
+          file: ./Dockerfile
+          platforms: linux/386,linux/amd64,linux/arm64
           tags: kobsio/app:${{ steps.tag.outputs.tag }}

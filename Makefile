@@ -1,7 +1,6 @@
 BRANCH    ?= $(shell git rev-parse --abbrev-ref HEAD)
 BUILDTIME ?= $(shell date '+%Y-%m-%d@%H:%M:%S')
 BUILDUSER ?= $(shell id -un)
-REPO      ?= github.com/kobsio/app
 REVISION  ?= $(shell git rev-parse HEAD)
 VERSION   ?= $(shell git describe --tags)
 
@@ -12,7 +11,7 @@ build:
 		-X github.com/kobsio/kobs/pkg/version.Branch=${BRANCH} \
 		-X github.com/kobsio/kobs/pkg/version.BuildUser=${BUILDUSER} \
 		-X github.com/kobsio/kobs/pkg/version.BuildDate=${BUILDTIME}" \
-		-o ./bin/kobs ./cmd/kobs;
+		-o ./bin/kobs .;
 
 .PHONY: release-major
 release-major:

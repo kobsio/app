@@ -1,4 +1,6 @@
 .github
-app/build
-app/node_modules
+.editorconfig
+.gitignore
 bin
+LICENSE
+README.md
