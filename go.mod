@@ -3,8 +3,8 @@ module github.com/kobsio/app-template
 go 1.18
 
 require (
-	github.com/kobsio/kobs v0.9.0
-	github.com/kobsio/plugin-template v0.9.0
+	github.com/kobsio/kobs v0.9.1
+	github.com/kobsio/plugin-template v0.9.1
 	go.uber.org/zap v1.21.0
 )
 

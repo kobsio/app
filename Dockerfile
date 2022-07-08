@@ -1,5 +1,5 @@
-FROM kobsio/kobs:v0.9.0 as app
-FROM kobsio/plugin:v0.9.0 as plugin-helloworld
+FROM kobsio/kobs:v0.9.1 as app
+FROM kobsio/plugin:v0.9.1 as plugin-helloworld
 
 FROM golang:1.18.3 as api
 WORKDIR /kobs
